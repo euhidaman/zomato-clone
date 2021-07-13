@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import './Header.css';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
@@ -8,6 +8,9 @@ function classNames(...classes) {
 }
 
 const Header = () => {
+
+    const [location, setLocation] = useState("Bengaluru");
+
     return (
         <div className="header">
             <img className="header__image" src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="zomato" />
@@ -21,8 +24,8 @@ const Header = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="mt-1 h-5 w-5" viewBox="0 0 20 20" fill="#F57082" >
                                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                                 </svg>
-                                <input className="w-50 py-2 px-6 text-gray-700 leading-tight focus:outline-none"
-                                    id="search" type="text" placeholder="Bengaluru"
+                                <input className="w-50 py-2 px-6 text-black-700 leading-tight focus:outline-none"
+                                    id="search" type="text" placeholder={location}
                                 />
                                 <svg xmlns="http://www.w3.org/2000/svg" className="mt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
@@ -47,28 +50,38 @@ const Header = () => {
                                 <div className="py-1">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <a
-                                                href="/"
+                                            <button onClick={() => setLocation("Bengaluru")}
+                                                className={classNames(
+                                                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                    'block px-20 py-3 text-sm'
+                                                )}
+                                            >
+                                                Bengaluru
+                                            </button>
+                                        )}
+                                    </Menu.Item>
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <button onClick={() => setLocation("Kolkata")}
                                                 className={classNames(
                                                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                     'block px-20 py-3 text-sm'
                                                 )}
                                             >
                                                 Kolkata
-                                            </a>
+                                            </button>
                                         )}
                                     </Menu.Item>
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <a
-                                                href="/"
+                                            <button onClick={() => setLocation("Delhi")}
                                                 className={classNames(
                                                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                     'block px-20 py-3 text-sm'
                                                 )}
                                             >
                                                 Delhi
-                                            </a>
+                                            </button>
                                         )}
                                     </Menu.Item>
                                 </div>
