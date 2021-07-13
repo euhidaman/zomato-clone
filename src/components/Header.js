@@ -93,8 +93,8 @@ const Header = () => {
             </div>
 
 
-            <h1 className="login">Log In</h1>
-            <h1 className="signup">Sign Up</h1>
+            <button><h1 className="login">Log In</h1></button>
+            <button><h1 className="signup">Sign Up</h1></button>
 
         </div>
     )
