@@ -1,0 +1,23 @@
+.header {
+  padding-top: 21px;
+  display: flex;
+}
+
+.header__image {
+  width: 127px;
+  height: 27px;
+  margin-left: 180px;
+  margin-top: 5px;
+}
+
+.login {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 80px;
+}
+
+.signup {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 50px;
+}
