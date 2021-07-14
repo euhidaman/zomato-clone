@@ -74,13 +74,25 @@ const Header = () => {
                                     </Menu.Item>
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <button onClick={() => setLocation("Delhi")}
+                                            <button onClick={() => setLocation("Delhi NCR")}
                                                 className={classNames(
                                                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                     'block px-20 py-3 text-sm'
                                                 )}
                                             >
-                                                Delhi
+                                                Delhi NCR
+                                            </button>
+                                        )}
+                                    </Menu.Item>
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <button onClick={() => setLocation("Mumbai")}
+                                                className={classNames(
+                                                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                    'block px-20 py-3 text-sm'
+                                                )}
+                                            >
+                                                Mumbai
                                             </button>
                                         )}
                                     </Menu.Item>
