@@ -5,8 +5,8 @@ const FoodOptions = () => {
         <div className="flex mt-10 justify-around px-20" >
 
             <div className="flex">
-                <button class="bg-pink-50 hover:bg-pink-100 mx-5 py-3 px-3 rounded-full">
-                    <img className="w-10 h-10 bg-pink-100"
+                <button class="bg-pink-100 hover:bg-pink-200 mx-5 py-3 px-3 rounded-full">
+                    <img className="w-10 h-10 bg-pink-100 hover:bg-pink-200"
                         src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp"
                         alt="delivery" />
                 </button>
@@ -39,7 +39,6 @@ const FoodOptions = () => {
                 </button>
                 <h1 className="mt-3.5 font-okra text-xl text-gray-500">Nutrition</h1>
             </div>
-
         </div>
     )
 }
