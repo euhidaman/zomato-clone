@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import './Header.css';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
@@ -7,9 +7,9 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const Header = () => {
+const Header = props => {
 
-    const [location, setLocation] = useState("Bengaluru");
+    const [location, setLocation] = props.functions;
 
     return (
         <div className="header">

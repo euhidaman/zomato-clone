@@ -4,7 +4,7 @@ const Food = () => {
     return (
         <div className="text-gray-400  body-font w-100">
             <div className="container px-10 py-10 mx-auto">
-                <div className="flex flex-wrap -m-4 px-32">
+                <div className="flex flex-wrap -m-4 pl-6">
                     {/* image-first */}
                     <div className="p-4 lg:w-1/4 md:w-1/2">
                         <div className="h-full flex flex-col items-center text-center">
@@ -36,7 +36,7 @@ const Food = () => {
                     {/* image-second */}
                     <div className="p-4 lg:w-1/4 md:w-1/2">
                         <div className="h-full flex flex-col items-center text-center">
-                            <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/201x201" />
+                            <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://images.spoonacular.com/file/wximages/423186-636x393.png" />
                             <div className="w-full">
                                 <h2 className="title-font font-medium text-lg text-white">Holden Caulfield</h2>
                                 <h3 className="text-gray-500 mb-3">UI Developer</h3>
