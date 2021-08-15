@@ -2,9 +2,10 @@
   "foodDetails": [
     {
       "id": 1,
-      "hotelName": "PizzaHut",
+      "hotelName": "Pizza Hut",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?pizza",
       "hotelType": "North India, Chinese",
+      "hotelRating": "4.6",
       "price": "₹400 for One",
       "description": "A common pizza in the United States"
     },
@@ -13,22 +14,25 @@
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
+      "hotelRating": "4.8",
       "price": "₹100 for One",
       "description": "A common burger in the United States"
     },
     {
       "id": 3,
-      "hotelName": "Burger King",
-      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelName": "Caramel Shake",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?milkshake",
       "hotelType": "South India, Veg",
+      "hotelRating": "3.6",
       "price": "₹100 for One",
       "description": "A common burger in the United States"
     },
     {
       "id": 4,
-      "hotelName": "Burger King",
-      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelName": "Wow Momo",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?momos",
       "hotelType": "South India, Veg",
+      "hotelRating": "4.2",
       "price": "₹100 for One",
       "description": "A common burger in the United States"
     },
@@ -37,6 +41,7 @@
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
+      "hotelRating": "3.6",
       "price": "₹100 for One",
       "description": "A common burger in the United States"
     },
@@ -45,6 +50,7 @@
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
+      "hotelRating": "3.6",
       "price": "₹100 for One",
       "description": "A common burger in the United States"
     }
