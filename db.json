@@ -17,7 +17,7 @@
       "description": "A common burger in the United States"
     },
     {
-      "id": 2,
+      "id": 3,
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
@@ -25,7 +25,7 @@
       "description": "A common burger in the United States"
     },
     {
-      "id": 2,
+      "id": 4,
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
@@ -33,7 +33,7 @@
       "description": "A common burger in the United States"
     },
     {
-      "id": 2,
+      "id": 5,
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
@@ -41,7 +41,7 @@
       "description": "A common burger in the United States"
     },
     {
-      "id": 2,
+      "id": 6,
       "hotelName": "Burger King",
       "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
       "hotelType": "South India, Veg",
