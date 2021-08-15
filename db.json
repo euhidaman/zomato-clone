@@ -1,0 +1,52 @@
+{
+  "foodDetails": [
+    {
+      "id": 1,
+      "hotelName": "PizzaHut",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?pizza",
+      "hotelType": "North India, Chinese",
+      "price": "₹400 for One",
+      "description": "A common pizza in the United States"
+    },
+    {
+      "id": 2,
+      "hotelName": "Burger King",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelType": "South India, Veg",
+      "price": "₹100 for One",
+      "description": "A common burger in the United States"
+    },
+    {
+      "id": 2,
+      "hotelName": "Burger King",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelType": "South India, Veg",
+      "price": "₹100 for One",
+      "description": "A common burger in the United States"
+    },
+    {
+      "id": 2,
+      "hotelName": "Burger King",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelType": "South India, Veg",
+      "price": "₹100 for One",
+      "description": "A common burger in the United States"
+    },
+    {
+      "id": 2,
+      "hotelName": "Burger King",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelType": "South India, Veg",
+      "price": "₹100 for One",
+      "description": "A common burger in the United States"
+    },
+    {
+      "id": 2,
+      "hotelName": "Burger King",
+      "hotelUrl": "https://source.unsplash.com/random/300×300/?burger",
+      "hotelType": "South India, Veg",
+      "price": "₹100 for One",
+      "description": "A common burger in the United States"
+    }
+  ]
+}
