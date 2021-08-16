@@ -9,7 +9,7 @@ import FilterButtons from './components/FilterButtons';
 function App() {
 
   const [location, setLocation] = useState("Chennai");
-  console.log(location)
+
   return (
     <div className="App">
       <Header functions={[location, setLocation]} />

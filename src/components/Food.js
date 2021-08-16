@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react";
+import axios from 'axios'
 
 const Food = () => {
 
     const [resDetail, setResDetail] = useState([]);
 
+    const fetchURL = "https://raw.githubusercontent.com/euhidaman/Fake_APIs/main/restaurant_details.json";
+
     useEffect(() => {
-        const fetchFood = async () => {
-            const res = await fetch("http://localhost:5000/foodDetails")
-            const data = await res.json();
-            setResDetail(data);
-        }
-        fetchFood();
+        getAllResDetails();
     }, [])
 
-    // useEffect(() => {
-    //     fetch("/resumeData.json")
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setResDetail(data);
-    //         });
-    // }, []);
+    const getAllResDetails = () => {
+        axios.get(fetchURL)
+            .then(res => {
+                const allDetails = res.data.foodDetails;
+                setResDetail(allDetails);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
 
     console.table(resDetail);
 
