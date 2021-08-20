@@ -55,12 +55,11 @@ const Food = () => {
                                     </div>
 
                                     <div className="w-full">
-                                        <div className="flex justify-between py-1">
-                                            <p className="text-gray-400 text-left text-sm mb-3">{food.hotelType}</p>
+                                        <div className="flex justify-between py-1 mb-3">
+                                            <p className="text-gray-400 text-left text-sm">{food.hotelType}</p>
                                             <h3 className="text-gray-400 text-right text-sm">{food.price}</h3>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
