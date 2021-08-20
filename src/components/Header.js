@@ -2,6 +2,8 @@ import { React } from 'react';
 import './Header.css';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+import LoginButton from './LoginButton';
+import SignUpButton from './SignUpButton';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -118,8 +120,8 @@ const Header = props => {
             </div>
 
 
-            <button><h1 className="login">Log In</h1></button>
-            <button><h1 className="signup">Sign Up</h1></button>
+            <LoginButton />
+            <SignUpButton />
 
         </div>
     )
