@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './LoginButton.css';
 
-
 export default function Modal() {
     const [showModal, setShowModal] = React.useState(false);
     const [input, setInput] = useState('');
@@ -17,9 +16,9 @@ export default function Modal() {
             {showModal ? (
                 <>
                     <div
-                        className="justify-center bg-opacity-70 bg-gray-900 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50"
+                        className=" justify-center bg-opacity-70 bg-gray-900 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50"
                     >
-                        <div className="relative  w-auto rounded-3xl my-6 mx-auto max-w-sm">
+                        <div className="relative  w-96 rounded-3xl my-6 mx-auto max-w-sm">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white">
                                 {/*header*/}
@@ -45,37 +44,53 @@ export default function Modal() {
                                     />
                                     <button
                                         className="w-full mt-3 bg-gray-300 font-sans
-                                        hover:bg-red-400
+                                        hover:bg-red-500 mb-2
                                         text-lg py-2 rounded shadow text-white outline-none 
                                         focus:outline-none ease-linear transition-all duration-150"
                                         type="button" disabled={!input}
                                     >
                                         Send OTP
                                     </button>
-                                    <h4>or</h4>
-                                    <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
 
-                                        I always felt like I could do anything. That’s the main
-                                        thing people are controlled by! Thoughts- their perception
-                                        of themselves!
-                                    </p>
+                                    <h4>or</h4>
+
+                                    <button
+                                        className="w-full mt-3 font-sans border-gray-300
+                                        text-lg py-2 rounded text-white border flex justify-center
+                                        ease-linear transition-all duration-150"
+                                        type="button"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 " viewBox="0 0 20 20" fill="#F57082">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                        </svg>
+                                        <p className="mx-3 text-gray-500 text-lg leading-relaxed">Continue with Email</p>
+                                    </button>
+
+                                    <button
+                                        className="w-full mt-3 font-sans border-gray-300
+                                        text-lg py-2 rounded text-white border flex justify-center
+                                        ease-linear transition-all duration-150"
+                                        type="button"
+                                    >
+                                        <svg className="mt-1 h-6 w-6" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.87566 13.2946L4.10987 16.1534L1.31093 16.2126C0.474461 14.6611 0 12.886 0 10.9997C0 9.17565 0.443609 7.45552 1.22994 5.94092H1.23054L3.72238 6.39776L4.81396 8.87465C4.5855 9.54071 4.46097 10.2557 4.46097 10.9997C4.46106 11.8072 4.60732 12.5808 4.87566 13.2946Z" fill="#FBBB00">
+                                            </path>
+                                            <path d="M21.8082 8.94507C21.9345 9.61048 22.0004 10.2977 22.0004 11C22.0004 11.7875 21.9176 12.5557 21.7598 13.2967C21.2243 15.8183 19.8252 18.0201 17.8869 19.5782L17.8863 19.5776L14.7477 19.4175L14.3035 16.6445C15.5896 15.8902 16.5947 14.7098 17.1242 13.2967H11.2422V8.94507H17.21H21.8082Z" fill="#518EF8">
+                                            </path>
+                                            <path d="M17.8865 19.5778L17.8871 19.5784C16.002 21.0937 13.6073 22.0002 11.0006 22.0002C6.81152 22.0002 3.16945 19.6588 1.31152 16.2132L4.87625 13.2952C5.8052 15.7744 8.19679 17.5392 11.0006 17.5392C12.2057 17.5392 13.3348 17.2134 14.3036 16.6447L17.8865 19.5778Z" fill="#28B446">
+                                            </path>
+                                            <path d="M18.0208 2.53241L14.4573 5.44981C13.4546 4.82307 12.2694 4.46102 10.9996 4.46102C8.13229 4.46102 5.69596 6.30682 4.81356 8.87494L1.23009 5.9412H1.22949C3.06022 2.41154 6.74823 0 10.9996 0C13.6686 0 16.1158 0.950726 18.0208 2.53241Z" fill="#F14336">
+                                            </path>
+                                        </svg>
+                                        <p className="mx-3 text-gray-500 text-lg leading-relaxed">Continue with Google</p>
+                                    </button>
                                 </div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-end p-6  rounded-3xl">
-                                    <button
-                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        Close
-                                    </button>
-                                    <button
-                                        className="bg-emerald-500 text-green-500 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        Save Changes
-                                    </button>
+                                <div className="flex items-center justify-start mx-6 py-3 rounded-3xl">
+                                    <p className="mb-2 font-light text-gray-800 text-lg leading-relaxed rounded-3xl">
+                                        New to Zomato? <span className="text-pink-700">Create account</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
