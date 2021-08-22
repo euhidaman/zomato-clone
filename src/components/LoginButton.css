@@ -4,3 +4,18 @@
   margin-left: 80px;
   margin-top: -15px;
 }
+
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+}
+
+h4:before,
+h4:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 0.5px solid rgba(214, 216, 216, 0.801);
+  margin: auto;
+}

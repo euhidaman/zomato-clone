@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import './LoginButton.css';
 
 
 export default function Modal() {
     const [showModal, setShowModal] = React.useState(false);
+    const [input, setInput] = useState('');
     return (
         <>
             <button
@@ -40,16 +41,18 @@ export default function Modal() {
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
                                     <input className="w-full h-11 -mt-1 text-lg border border-gray-300 focus:outline-none rounded-md focus:border-8 focus:border-green-800 "
-                                        type="text" placeholder="Phone number"
+                                        type="text" placeholder="Phone number" value={input} onChange={event => setInput(event.target.value)}
                                     />
                                     <button
                                         className="w-full mt-3 bg-gray-300 font-sans
+                                        hover:bg-red-400
                                         text-lg py-2 rounded shadow text-white outline-none 
                                         focus:outline-none ease-linear transition-all duration-150"
-                                        type="button"
+                                        type="button" disabled={!input}
                                     >
                                         Send OTP
                                     </button>
+                                    <h4>or</h4>
                                     <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
 
                                         I always felt like I could do anything. That’s the main

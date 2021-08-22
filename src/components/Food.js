@@ -25,8 +25,8 @@ const Food = () => {
     console.table(resDetail);
 
     return (
-        <div className="text-gray-400  body-font w-full">
-            <div className="container px-10 py-10 mx-auto">
+        <div className="text-gray-400  body-font">
+            <div className="container px-10 py-10 md:mx-auto">
                 <div className="flex flex-wrap -m-4 pl-6">
 
                     {resDetail.map((food) => (
