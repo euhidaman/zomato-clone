@@ -39,8 +39,8 @@ export default function Modal() {
                                 </div>
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
-                                    <input className="w-full h-11 -mt-1 text-lg border border-gray-300 focus:outline-none rounded-md focus:border-8 focus:border-green-800 "
-                                        type="text" placeholder="Phone number" value={input} onChange={event => setInput(event.target.value)}
+                                    <input className="w-full h-11 -mt-1 text-left text-lg px-4 border border-gray-300 focus:outline-none rounded-md focus:border-8 focus:border-green-800 "
+                                        type="tel" placeholder="Phone number" value={input} onChange={event => setInput(event.target.value)}
                                     />
                                     <button
                                         className="w-full mt-3 bg-gray-300 font-sans
