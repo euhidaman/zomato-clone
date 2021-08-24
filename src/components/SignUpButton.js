@@ -49,15 +49,16 @@ export default function SignUpButton() {
                                         type="tel" placeholder="Email" value={email} onChange={event => setEmail(event.target.value)}
                                     />
 
-                                    <div className="mt-4 space-y-4">
+                                    <div className="mt-4 py-4 space-y-4">
                                         <div className="flex items-start">
                                             <div className="flex items-center h-5">
                                                 <input
                                                     type="checkbox"
-                                                    className="h-4 w-4 border border-gray-300 focus:outline-none rounded-md focus:border-8"
+                                                    className="h-6 w-6 border text-pink-200 border-gray-100 hover:border-pink-100 focus:outline-none rounded-md focus:border-2"
                                                 />
-                                                <label htmlFor="candidates" className="font-medium text-sm text-gray-700">
-                                                    Candidates
+                                                <label className="font-normal text-xs m-2 text-gray-500">
+                                                    I agree to Zomato's <span className="text-pink-500 font-medium"> Terms of Service, Privacy Policy</span> and
+                                                    <span className="text-pink-500 font-medium"> Content Policies</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -81,19 +82,6 @@ export default function SignUpButton() {
                                         ease-linear transition-all duration-150"
                                         type="button"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 " viewBox="0 0 20 20" fill="#F57082">
-                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                        </svg>
-                                        <p className="mx-3 text-gray-500 text-lg leading-relaxed">Continue with Email</p>
-                                    </button>
-
-                                    <button
-                                        className="w-full mt-3 font-sans border-gray-300
-                                        text-lg py-2 rounded text-white border flex justify-center
-                                        ease-linear transition-all duration-150"
-                                        type="button"
-                                    >
                                         <svg className="mt-1 h-6 w-6" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4.87566 13.2946L4.10987 16.1534L1.31093 16.2126C0.474461 14.6611 0 12.886 0 10.9997C0 9.17565 0.443609 7.45552 1.22994 5.94092H1.23054L3.72238 6.39776L4.81396 8.87465C4.5855 9.54071 4.46097 10.2557 4.46097 10.9997C4.46106 11.8072 4.60732 12.5808 4.87566 13.2946Z" fill="#FBBB00">
                                             </path>
@@ -108,9 +96,9 @@ export default function SignUpButton() {
                                     </button>
                                 </div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-start mx-6 py-3 rounded-3xl">
-                                    <p className="mb-2 font-light text-gray-800 text-lg leading-relaxed rounded-3xl">
-                                        New to Zomato? <span className="text-pink-700">Create account</span>
+                                <div className="flex items-center justify-start mx-6 mb-2 rounded-3xl">
+                                    <p className="mb-2 text-gray-800 text-lg leading-relaxed rounded-3xl">
+                                        Already have an account? <span className="text-pink-700">Log in</span>
                                     </p>
                                 </div>
                             </div>
