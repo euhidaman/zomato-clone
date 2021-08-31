@@ -25,13 +25,14 @@ const Food = () => {
 
     return (
         <>
-            <div className="text-gray-400  body-font"
-                onClick={() => setShowModal(true)}>
+            <div className="text-gray-400  body-font" >
                 <div className="container px-10 py-10 md:mx-auto">
                     <div className="flex flex-wrap -m-4 pl-6">
 
                         {resDetail.map((food) => (
-                            <div className="mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg">
+                            <div className="mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg"
+                                onClick={() => setShowModal(true)}
+                            >
                                 <div className="h-full flex flex-col items-center text-center">
                                     <img alt="team" className="flex-shrink-0 rounded-lg w-full h-60 object-cover object-center mb-2" src={food.hotelUrl} />
 
@@ -63,6 +64,7 @@ const Food = () => {
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         ))}
 
@@ -73,27 +75,45 @@ const Food = () => {
             {showModal ? (
                 <>
                     <div
-                        className="justify-center -mt-80 bg-opacity-70 bg-gray-900 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50"
+                        className="justify-center bg-opacity-70 bg-gray-900 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50"
                     >
                         <div className="relative w-auto mx-auto max-w-6xl rounded-3xl">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-3xl">
+                                <div className="flex items-start justify-between p-5 border-solid border-blueGray-200 rounded-3xl">
                                     <h3 className="text-3xl font-semibold">
                                         Modal Title
                                     </h3>
                                     <button
-                                        className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                                        className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                                         onClick={() => setShowModal(false)}
                                     >
-                                        <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                                            ×
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="text-gray-600 h-6 w-6" viewBox="0 0 20 20" fill="black">
+                                                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
                                         </span>
                                     </button>
                                 </div>
                                 {/*body*/}
-                                <div className="relative p-6 flex-auto">
+
+                                {/* food_det */}
+                                <section class="text-gray-600 body-font">
+                                    <div class="container mx-auto flex px-5 items-center justify-center flex-col">
+                                        <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/1500x1000/000/fff" />
+                                        <div class="text-center lg:w-2/3 w-full">
+                                            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth tattooed vexillologist</h1>
+                                            <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled.Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh.Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo booth af fingerstache pitchfork.</p>
+                                            <div class="flex justify-center">
+                                                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                                                <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                {/* food_det */}
+                                {/* <div className="relative p-6 flex-auto">
                                     <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
                                         I always felt like I could do anything. That’s the main
                                         thing people are controlled by! Thoughts- their perception
@@ -101,9 +121,9 @@ const Food = () => {
                                         themselves. If you're taught you can’t do anything, you
                                         won’t do anything. I was taught I could do everything.
                                     </p>
-                                </div>
+                                </div> */}
                                 {/*footer*/}
-                                <div className="flex items-center rounded-3xl justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                {/* <div className="flex items-center rounded-3xl justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                                     <button
                                         className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"
@@ -118,7 +138,7 @@ const Food = () => {
                                     >
                                         Save Changes
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
