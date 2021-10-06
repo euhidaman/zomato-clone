@@ -19,3 +19,8 @@ h4:after {
   border-bottom: 0.5px solid rgba(214, 216, 216, 0.801);
   margin: auto;
 }
+@media screen and (max-width: 767px) {
+  .login {
+    margin-left: 0;
+  }
+}
