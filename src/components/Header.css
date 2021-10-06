@@ -1,11 +1,20 @@
 .header {
   padding-top: 21px;
   display: flex;
+  justify-content: space-around;
+  max-width: max-content;
+  align-items: baseline;
+  margin: 0 auto;
 }
 
 .header__image {
   width: 127px;
   height: 27px;
-  margin-left: 180px;
+  margin-left: 15px;
   margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
 }
