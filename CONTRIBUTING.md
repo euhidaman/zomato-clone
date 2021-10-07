@@ -19,6 +19,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 * Star the repo for quicker access to it & if you like the initiative.
 
 * After your PR is merged, your name will appear under the "Contributors" section in README file.
+
 <hr/>
 
 ## Pull Request Process
@@ -28,8 +29,8 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 2. Increase the version numbers in any examples files and the README.md to the new version that this
    Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-3. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+3. You may merge the Pull Request in once you have the sign-off of the maintainer, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
+4. Also, make sure to do **Fetch upstream** to get the latest changes and resolve any impending merge conflicts.
 <hr/>
 
 ## Code of Conduct
