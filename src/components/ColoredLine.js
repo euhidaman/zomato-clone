@@ -4,7 +4,7 @@ const ColoredLine = ({ color }) => (
     <div className="py-2">
         <hr
             style={{
-                marginLeft: 165,
+                marginLeft: 185,
                 color: "red",
                 backgroundColor: "red",
                 width: 200,
