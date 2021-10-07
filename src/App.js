@@ -5,6 +5,7 @@ import Food from "./components/Food";
 import FoodOptions from "./components/FoodOptions";
 import FilterButtons from "./components/FilterButtons";
 import ColoredLine from "./components/ColoredLine";
+import ScrollButton from "./components/ScrollButton";
 
 function App() {
   const [location, setLocation] = useState("Chennai");
@@ -14,8 +15,11 @@ function App() {
       <FoodOptions />
       <ColoredLine />
       <FilterButtons />
-      <h1 className="mx-44 pt-4 text-3xl font-normal" >Best Food in {location}</h1>
+      <h1 className="mx-44 pt-4 text-3xl font-normal">
+        Best Food in {location}
+      </h1>
       <Food />
+      <ScrollButton />
     </div>
   );
 }

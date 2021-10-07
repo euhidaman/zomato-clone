@@ -1,0 +1,23 @@
+.scroll-button {
+  position: fixed;
+  bottom: 1.85rem;
+  right: 1.85em;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+
+svg {
+  transition: opacity 0.8s ease 0s, visibility 0.8s ease 0s;
+  box-shadow: rgb(54 54 54 / 6%) 0px 1.6rem 1.6rem,
+    rgb(54 54 54 / 8%) 0px 0.8rem 0.8rem;
+}
+
+.svg:hover {
+  background: rgb(224, 53, 70);
+}
+
+.hidden {
+  display: none;
+}
