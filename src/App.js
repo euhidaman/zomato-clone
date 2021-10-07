@@ -14,6 +14,7 @@ function App() {
       <FoodOptions />
       <ColoredLine />
       <FilterButtons />
+      <h1 className="mx-44 pt-4 text-3xl font-normal" >Best Food in {location}</h1>
       <Food />
     </div>
   );

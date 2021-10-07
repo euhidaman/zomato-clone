@@ -3,7 +3,7 @@ import React from "react";
 const FilterButtons = () => {
   return (
     <>
-      <div className="flex justify-start items-center ml-36 my-3 ">
+      <div className="flex justify-start items-center ml-40 my-3 ">
         <div className="flex ">
           <button
             type="button"
