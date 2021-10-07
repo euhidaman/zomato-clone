@@ -3,9 +3,7 @@ import React from "react";
 const FilterButtons = () => {
   return (
     <>
-      {/*added overflow-x-auto to prevent overflow*/}
-      {/*added w-11/12 i.e, 83% to properly center the container*/}
-      <div className="flex justify-start items-center overflow-x-auto  mx-auto  lg:w-11/12 lg:max-w-4xl my-3 ">
+      <div className="flex justify-start items-center my-3 ">
         <div className="flex ">
           <button
             type="button"
