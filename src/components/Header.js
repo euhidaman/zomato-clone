@@ -26,7 +26,8 @@ const Header = (props) => {
         {({ open }) => (
           <>
             <div>
-              <Menu.Button className="hidden md:inline-flex  justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+              {/*This dropdown will be appear on device widths 640px or higher and stay hidden on other widths.*/}
+              <Menu.Button className="hidden sm:inline-flex  justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mt-1 h-5 w-5"
@@ -40,7 +41,7 @@ const Header = (props) => {
                   />
                 </svg>
                 <input
-                  className="w-50  md:w-24 py-2 px-6 text-black-700 leading-tight focus:outline-none"
+                  className="w-50  md:w-28 py-2 px-6 text-black-700 leading-tight focus:outline-none"
                   id="search"
                   type="text"
                   placeholder={location}
@@ -143,7 +144,8 @@ const Header = (props) => {
       </Menu>
       {/* Dropdown end */}
 
-      <div className=" ml-5 -mt-3  md:w-80 md:ml-0  max-w-6xl hidden  lg:w-auto md:inline-flex items-center shadow-md rounded-md border border-gray-300">
+      {/*This search bar will be appear on device widths 768px or higher and stay hidden on other widths.*/}
+      <div className=" ml-5 -mt-3 md:w-80 md:ml-0 lg:w-auto md:inline-flex max-w-6xl hidden items-center shadow-md rounded-md border border-gray-300">
         <input
           className=" w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
           id="search"
@@ -173,12 +175,16 @@ const Header = (props) => {
           </button>
         </div>
       </div>
-      <div className="navbar lg:hidden  ">
-        <Navbar />
-      </div>
-      <div className="hidden lg:inline-flex ">
+      {/*the buttons will appear as text on phones and tablets width 1024px or higher and disappear on widths 768px or higher */}
+      <div className="md:hidden lg:inline-flex  ">
         <LoginButton />
         <SignUpButton />
+      </div>
+      {/*the buttons will appear inside a menu in devices width 768px or higher and disappear on
+        any other widths and width greater than 1024px or higher.
+      */}
+      <div className="md:inline-flex hidden lg:hidden  ">
+        <Navbar />
       </div>
     </div>
   );
