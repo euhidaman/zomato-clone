@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Find({ searchQuery }) {
@@ -6,11 +6,6 @@ function Find({ searchQuery }) {
 
   const fetchURL =
     "https://raw.githubusercontent.com/euhidaman/Fake_APIs/main/restaurant_details.json";
-
-  useEffect(() => {
-    getAllDetails();
-    // return () => setResults([]);
-  }, [searchQuery]);
 
   const getAllDetails = async () => {
     try {
@@ -21,6 +16,10 @@ function Find({ searchQuery }) {
       console.log(err);
     }
   };
+  useEffect(() => {
+    getAllDetails();
+    // return () => setResults([]);
+  }, [searchQuery]);
 
   return (
     <>

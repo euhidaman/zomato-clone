@@ -1,11 +1,11 @@
-import { React } from "react";
 import "./Header.css";
 import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import LoginButton from "./LoginButton";
-import SignUpButton from "./SignUpButton";
 import Find from "./Find";
+import LoginButton from "./LoginButton";
+import { Menu, Transition } from "@headlessui/react";
 import Navbar from "./Navbar";
+import React from "react";
+import SignUpButton from "./SignUpButton";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -13,6 +13,7 @@ function classNames(...classes) {
 
 const Header = (props) => {
   const [location, setLocation] = props.functions;
+  const { setQuery, searchQuery } = props;
   return (
     <div className="header">
       <img
@@ -79,6 +80,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Bengaluru")}
                         className={classNames(
                           active
@@ -94,6 +96,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Kolkata")}
                         className={classNames(
                           active
@@ -109,6 +112,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Delhi NCR")}
                         className={classNames(
                           active
@@ -124,6 +128,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Mumbai")}
                         className={classNames(
                           active
@@ -154,12 +159,11 @@ const Header = (props) => {
             type="text"
             placeholder="Search for restaurant, cuisine or a dish"
             onInputCapture={(e) => {
-              props.setSearched(false);
-              props.setQuery(e.target.value);
+              setQuery(e.target.value);
             }}
           />
           <div className="p-3">
-            <button onClick={() => props.setSearched(true)}>
+            <button type="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-6"
@@ -180,12 +184,12 @@ const Header = (props) => {
 
         <div
           className={
-            props.searchQuery
+            searchQuery
               ? "absolute  rounded-lg top-20 w-80 max-w-lg px-10 lg:w-max  lg:px-24 py-5 z-10 shadow-md overflow-y-auto max-h-96"
               : "hidden"
           }
         >
-          {props.searchQuery ? <Find searchQuery={props.searchQuery} /> : ""}
+          {searchQuery ? <Find searchQuery={searchQuery} /> : ""}
         </div>
       </div>
 

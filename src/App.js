@@ -9,14 +9,12 @@ import ColoredLine from "./components/ColoredLine";
 function App() {
   const [location, setLocation] = useState("Chennai");
   const [searchQuery, setQuery] = useState("");
-  const [searched, setSearched] = useState(false);
+
   return (
     <div className="App">
       <Header
         functions={[location, setLocation]}
         setQuery={setQuery}
-        setSearched={setSearched}
-        searched={searched}
         searchQuery={searchQuery}
       />
       <FoodOptions />
