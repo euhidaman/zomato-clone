@@ -1,10 +1,20 @@
 .header {
   padding-top: 21px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: max-content;
   align-items: baseline;
   margin: 0 auto;
+}
+
+button.login {
+  margin: 1rem 1rem 1rem 2rem
+}
+
+button > h1.signup {
+  /* padding: 0; */
+  margin: 1rem 0 1rem 1rem;
 }
 
 .header__image {
