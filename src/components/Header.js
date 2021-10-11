@@ -1,11 +1,11 @@
-import { React } from "react";
 import "./Header.css";
 import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import Find from "./Find";
 import LoginButton from "./LoginButton";
-import SignUpButton from "./SignUpButton";
-
+import { Menu, Transition } from "@headlessui/react";
 import Navbar from "./Navbar";
+import React from "react";
+import SignUpButton from "./SignUpButton";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -13,6 +13,7 @@ function classNames(...classes) {
 
 const Header = (props) => {
   const [location, setLocation] = props.functions;
+  const { setQuery, searchQuery } = props;
   return (
     <div className="header">
       <img
@@ -79,6 +80,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Bengaluru")}
                         className={classNames(
                           active
@@ -94,6 +96,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Kolkata")}
                         className={classNames(
                           active
@@ -109,6 +112,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Delhi NCR")}
                         className={classNames(
                           active
@@ -124,6 +128,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Mumbai")}
                         className={classNames(
                           active
@@ -145,36 +150,49 @@ const Header = (props) => {
       {/* Dropdown end */}
 
       {/*This search bar will be appear on device widths 768px or higher and stay hidden on other widths.*/}
-      <div className=" ml-5 -mt-3 md:w-80 md:ml-0 lg:w-auto md:inline-flex max-w-6xl hidden items-center shadow-md rounded-md border border-gray-300">
-        <input
-          className=" w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
-          id="search"
-          type="text"
-          placeholder="Search for restaurant, cuisine or a dish"
-          onInputCapture={(e) => {
-            props.setSearched(false);
-            props.setQuery(e.target.value);
-          }}
-        />
-        <div className="p-3">
-          <button onClick={() => props.setSearched(true)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="#828282"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+
+      <div className="flex-col ml-5 -mt-3  md:ml-0 lg:w-auto md:inline-flex max-w-6xl hidden items-center focus-within:shadow-md rounded-md border border-gray-300">
+        <div className="flex">
+          <input
+            className="md:w-11/12 lg:w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
+            id="search"
+            type="text"
+            placeholder="Search for restaurant, cuisine or a dish"
+            onInputCapture={(e) => {
+              setQuery(e.target.value);
+            }}
+          />
+          <div className="p-3">
+            <button type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#828282"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={
+            searchQuery
+              ? "absolute  rounded-lg top-20 w-80 max-w-lg px-10 lg:w-max  lg:px-24 py-5 z-10 shadow-md overflow-y-auto max-h-96"
+              : "hidden"
+          }
+        >
+          {searchQuery ? <Find searchQuery={searchQuery} /> : ""}
         </div>
       </div>
+
       {/*the buttons will appear as text on phones and tablets width 1024px or higher and disappear on widths 768px or higher */}
       <div className="md:hidden lg:inline-flex  ">
         <LoginButton />
