@@ -2,12 +2,10 @@ import React from 'react'
 
 const ColoredLine = ({ color }) => (
     <div className="py-2">
-        <hr
+        <hr className = "w-15 md:ml-14"
             style={{
-                marginLeft: 165,
                 color: "red",
                 backgroundColor: "red",
-                width: 200,
                 height: 3
             }}
         />

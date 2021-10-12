@@ -25,11 +25,11 @@ const Food = () => {
     return (
         <>
             <div className="text-gray-400  body-font md: flex-col w-100" >
-                <div className="container px-10 py-10 md:w-100">
-                    <div className="flex flex-wrap -m-4 pl-6">
+                <div className="container px-10 py-10 md:w-full">
+                    <div className="flex flex-wrap -m-4">
 
                         {resDetail.map((food) => (
-                            <div className="mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg">
+                            <div className="lg:w-1/4 sm: w-full mb-4 p-2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg">
                                 <div className="h-full flex flex-col items-center text-center">
                                     <img alt="team" className="flex-shrink-0 rounded-lg w-full h-60 object-cover object-center mb-2" src={food.hotelUrl} />
 

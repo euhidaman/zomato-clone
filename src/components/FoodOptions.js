@@ -2,11 +2,10 @@ import React from 'react'
 
 const FoodOptions = () => {
     return (
-        <div className="flex justify-around px-20 mt-10 overflow-auto md:w-full" >
-
+        <div className="flex space-x-12 md:space-x-0 md:justify-around mt-10 overflow-auto scrollbar-hide" >
             <div className="flex">
-                <button className="px-3 py-3 mx-5 bg-pink-100 rounded-full hover:bg-pink-200 ">
-                    <img className="w-10 h-10 bg-pink-100 hover:bg-pink-200 md:w-60"
+                <button className="w-10 py-3 bg-pink-100 rounded-full hover:bg-pink-200 ">
+                    <img className="w-full h-10 bg-pink-100 hover:bg-pink-200"
                         src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp"
                         alt="delivery" />
                 </button>
@@ -14,8 +13,8 @@ const FoodOptions = () => {
             </div>
 
             <div className="flex">
-                <button className="px-3 py-3 mx-5 rounded-full bg-gray-50 hover:bg-pink-100">
-                    <img className="w-10 h-10 bg-gray-100 hover:bg-pink-100"
+                <button className="w-10 py-3 rounded-full bg-gray-50 hover:bg-pink-100">
+                    <img className="w-full h-10 bg-gray-100 hover:bg-pink-100"
                         src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png?output-format=webp"
                         alt="delivery" />
                 </button>
@@ -23,8 +22,8 @@ const FoodOptions = () => {
             </div>
 
             <div className="flex">
-                <button class="bg-gray-50 hover:bg-pink-100 mx-5 py-3 px-3 rounded-full">
-                    <img className="w-10 h-10 bg-gray-100 hover:bg-pink-100"
+                <button class="w-10 bg-gray-50 hover:bg-pink-100 py-3 rounded-full">
+                    <img className="w-full h-10 bg-gray-100 hover:bg-pink-100"
                         src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png"
                         alt="delivery" />
                 </button>
@@ -32,8 +31,8 @@ const FoodOptions = () => {
             </div>
 
             <div className="flex">
-                <button className="px-3 py-3 mx-5 rounded-full bg-gray-50 hover:bg-pink-100">
-                    <img className="w-10 h-10 bg-gray-100 hover:bg-pink-100"
+                <button className="w-10 py-3 rounded-full bg-gray-50 hover:bg-pink-100">
+                    <img className="w-full h-10 bg-gray-100 hover:bg-pink-100"
                         src="https://b.zmtcdn.com/data/o2_assets/54cad8274d3c3ec7129e0808a13b27c31616582882.png"
                         alt="delivery" />
                 </button>

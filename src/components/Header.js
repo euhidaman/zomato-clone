@@ -16,7 +16,7 @@ const Header = props => {
     return (
         <div>
             <div className="flex justify-start mb-4">
-                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="Zomato" className="w-full px-2 md:w-1/2" />
+                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="Zomato" className="w-full px-2 md:w-1/6" />
             </div>
             <div className="flex flex-col space-y-8 md:space-y-0 md:items-center md:justify-evenly md:flex-row">
                 <Menu as="div" className="relative inline-block mx-8 -mt-2 text-left md:w-100">
