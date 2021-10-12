@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.2.0",
-    "@headlessui/react": "^1.3.0",
+    "@craco/craco": "^6.3.0",
+    "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.2",
     "@material-tailwind/react": "0.3.4",
     "@popperjs/core": "2.9.1",
@@ -17,15 +17,15 @@
     "json-server": "^0.16.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "server": "json-server --watch db.json --port 5000",
+    "format": "prettier --write --no-error-on-unmatched-pattern src/**/*.{js,ts,tsx,css,json} *.{js,json}"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +48,7 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16",
+    "web-vitals": "^1.1.2"
   }
 }

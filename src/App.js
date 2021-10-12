@@ -16,7 +16,7 @@ function App() {
       <FoodOptions />
       <ColoredLine color="gray" />
       <FilterButtons />
-      <h1 className="mx-44 pt-4 text-3xl font-normal" >Best Food in {location}</h1>
+      <div className="md : pt-8 text-3xl font-normal mx-14" >Best Food in {location}</div>
       <Food />
     </div>
   );
