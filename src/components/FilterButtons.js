@@ -3,8 +3,8 @@ import React from "react";
 const FilterButtons = () => {
   return (
     <>
-      <div className="flex justify-start items-center ml-36 my-3 ">
-        <div className="flex ">
+      <div className="flex justify-start items-center md:ml-36 my-3">
+        <div className="flex overflow-auto scrollbar-hide ">
           <button
             type="button"
             className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
