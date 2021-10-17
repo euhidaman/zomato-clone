@@ -8,7 +8,7 @@ const FoodOptions = () => {
       {/*added max-w-5xl to prevent stretching of option*/}
       {/*added mx-auto to centre the container*/}
       {/*added overflow-x-auto to enable scrolling on smaller and mid size screens*/}
-      <div className="flex mt-10 justify-between sm:w-11/12 lg:max-w-5xl mx-auto overflow-x-auto">
+      <div className="flex mt-10 justify-between sm:w-11/12 lg:max-w-5xl mx-auto overflow-x-auto scrollbar-hide">
         <div className="flex">
           <button className="bg-pink-100 hover:bg-pink-200 mx-5 py-3 px-3 rounded-full">
             {/*added max-w-xs to prevernt image stretching*/}
