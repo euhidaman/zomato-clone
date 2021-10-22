@@ -23,3 +23,17 @@
         padding: 0 1rem !important;
     }
 }
+
+@media screen and (max-width: 300px) {
+    
+    .hotel-info-wrapper, .hotel-type-price-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .hotel-type-price-container {
+        margin-bottom: 0;
+    }
+}
