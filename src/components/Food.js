@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import "./Food.css";
 
 const Food = () => {
 
@@ -25,13 +26,13 @@ const Food = () => {
     return (
         <>
             <div className="text-gray-400  body-font" >
-                <div className="container px-10 py-10 md:mx-auto">
-                    <div className="flex flex-wrap -m-4 pl-6">
+                <div className="container food-body px-10 py-10 md:mx-auto">
+                    <div className="flex flex-wrap -m-4 pl-6 foods-container">
 
                         {resDetail.map((food) => (
-                            <div className="mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg">
-                                <div className="h-full flex flex-col items-center text-center">
-                                    <img alt="team" className="flex-shrink-0 rounded-lg w-full h-60 object-cover object-center mb-2" src={food.hotelUrl} />
+                            <div className="mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg food-container">
+                                <div className="h-full flex flex-col items-center text-center food-wrapper">
+                                    <img alt="team" className="flex-shrink-0 rounded-lg w-full h-60 object-cover object-center mb-2 food-image" src={food.hotelUrl}/>
 
                                     <div className="w-full ">
                                         <div className="flex justify-between bg-transparent -mt-10">

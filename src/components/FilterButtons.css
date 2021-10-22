@@ -12,3 +12,10 @@
     align-items: center;
     align-content: center;
 }
+
+
+@media screen and (max-width: 300px) {
+    .filter-buttons-container {
+        margin: 1rem 0;
+    }
+}
