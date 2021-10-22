@@ -1,6 +1,7 @@
 import React from "react";
 import LoginButton from "./LoginButton";
 import SignUpButton from "./SignUpButton";
+import "./Navbar.css";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 
@@ -39,9 +40,9 @@ function Navbar() {
             >
               <Menu.Items
                 static
-                className="right-0 mt-5 absolute rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                className="right-0 mt-5 absolute rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none login-sign-up-wrapper"
               >
-                <div className="py-6 flex flex-col w-40 px-5 items-end space-y-2 rounded-md">
+                <div className="py-6 flex flex-col w-40 px-5 items-end space-y-2 rounded-md login-sign-up-container">
                   <Menu.Item>{<SignUpButton />}</Menu.Item>
                   <Menu.Item>{<LoginButton />}</Menu.Item>
                 </div>

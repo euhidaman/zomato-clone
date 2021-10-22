@@ -1,0 +1,4 @@
+.login-sign-up-wrapper > *, .login-sign-up-container, .login-sign-up-container > * {
+    z-index: 2;
+    position: relative;
+}

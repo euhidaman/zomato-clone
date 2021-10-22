@@ -44,6 +44,11 @@ button > h1.signup {
   }
 }
 
+.locations-wrapper, .locations-wrapper > * {
+  display: relative;
+  z-index: 2;
+}
+
 
 @media screen and (max-width: 1025px) {
   button  {
