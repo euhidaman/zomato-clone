@@ -7,7 +7,7 @@ import { Menu, Transition } from "@headlessui/react";
 function Navbar() {
   const Component = () => {
     return (
-      <Menu as="div" className="relative mx-8 -mt-2 inline-block text-left ">
+      <Menu as="div" className="navbar relative mx-8 -mt-2 inline-block text-left ">
         {({ open }) => (
           <>
             <div>

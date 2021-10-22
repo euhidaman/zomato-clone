@@ -22,7 +22,7 @@ const Header = (props) => {
       />
 
       {/* Dropdown start */}
-      <Menu as="div" className="relative mx-8 -mt-2 inline-block text-left ">
+      <Menu as="div" className="relative mx-8 -mt-2 inline-block text-left loc-dropdown">
         {({ open }) => (
           <>
             <div>
@@ -143,7 +143,7 @@ const Header = (props) => {
       </Menu>
       {/* Dropdown end */}
 
-      <div className=" ml-5 -mt-3  md:w-80 md:ml-0  max-w-6xl hidden  lg:w-auto md:inline-flex items-center shadow-md rounded-md border border-gray-300">
+      <div className=" ml-5 -mt-3  md:w-80 md:ml-0  max-w-6xl hidden  lg:w-auto md:inline-flex items-center shadow-md rounded-md border border-gray-300 search-bar">
         <input
           className=" w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
           id="search"

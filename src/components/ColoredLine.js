@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ColoredLine = ({ color }) => (
-    <div className="py-2">
+    <div className="py-2 colored-line">
         <hr
             style={{
                 marginLeft: 165,

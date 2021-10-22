@@ -23,6 +23,40 @@ button > h1.signup {
   margin-left: 15px;
   margin-top: 5px;
 }
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header .loc-dropdown{
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .header .search-bar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header .navbar {
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 1025px) {
+  button  {
+    margin: 0 !important;
+    text-align: center !important;
+    align-self: center;
+  }
+
+  button > h1.signup {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     justify-content: space-between;
