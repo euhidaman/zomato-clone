@@ -1,0 +1,13 @@
+.filter-buttons-container {
+    justify-content: center;
+}
+.filter-buttons-container .flex button {
+    min-width: max-content;
+    margin: 0.5rem !important;
+}
+
+.filter-buttons-container .flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
