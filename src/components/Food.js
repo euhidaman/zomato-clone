@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Food = () => {
+const Food = ({ filters }) => {
   const [resDetail, setResDetail] = useState([]);
+  const [filteredRes, setFilteredRes] = useState([]);
 
   const fetchURL =
     "https://raw.githubusercontent.com/euhidaman/Fake_APIs/main/restaurant_details.json";
@@ -10,6 +11,12 @@ const Food = () => {
   useEffect(() => {
     getAllResDetails();
   }, []);
+
+  useEffect(() => {
+    setFilteredRes(
+      resDetail.filter((res) => Number(res.hotelRating) >= filters.rating)
+    );
+  }, [resDetail, filters]);
 
   const getAllResDetails = () => {
     axios
@@ -28,7 +35,7 @@ const Food = () => {
       <div className="text-gray-400  body-font">
         <div className="container px-10 py-10 md:mx-auto">
           <div className="flex flex-wrap md:-m-4 md:pl-6">
-            {resDetail.map((food, index) => (
+            {filteredRes.map((food, index) => (
               <div
                 key={index}
                 className="w-full mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg"
