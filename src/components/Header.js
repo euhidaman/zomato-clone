@@ -187,14 +187,11 @@ const Header = (props) => {
       </div>
     </div>
 
-      {/*the buttons will appear as text on phones and tablets width 1024px or higher and disappear on widths 768px or higher */}
       <div className="lg:inline-flex hidden">
         <LoginButton />
         <SignUpButton />
       </div>
-      {/*the buttons will appear inside a menu in devices width 768px or higher and disappear on
-        any other widths and width greater than 1024px or higher.
-      */}
+      
       <div className="lg:hidden navbar">
         <Navbar />
       </div>

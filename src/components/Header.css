@@ -67,3 +67,21 @@ button > h1.signup {
     justify-content: space-between;
   }
 }
+
+@media screen and (max-width: 275px) {
+  .header {
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .header__image, .navbar {
+    text-align: center !important;
+    margin: 0.25rem 0;
+  }
+
+  .loc-dropdown {
+    display: none !important;
+  }
+}
