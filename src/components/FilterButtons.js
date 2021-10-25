@@ -14,7 +14,7 @@ const FilterButtons = ({ onChangeFilters, filters }) => {
         <button onClick={() => setShowMenu(false)}>
           <CloseIcon className="absolute z-20 right-10 top-16 bg-transparent" />
         </button>
-        <h1 className="bg-transparent text-4xl">Filters</h1>
+        <h1 className="bg-transparent text-4xl">Rating</h1>
         {[1, 2, 3, 4, 5].map((elem) => (
           <button
             key={elem}
@@ -33,49 +33,10 @@ const FilterButtons = ({ onChangeFilters, filters }) => {
             {`Rating: ${elem}.0+`}
           </button>
         ))}
-        <button
-          type="button"
-          className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out"
-        >
-          Safe and Hygenic
-        </button>
-        <button
-          type="button"
-          className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out"
-        >
-          Pure Veg
-        </button>
-        <button
-          type="button"
-          className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 hover:bg-gray-100"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
-            />
-          </svg>
-          Delivery Time
-        </button>
-        <button
-          type="button"
-          className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out"
-        >
-          Great Offers
-        </button>
       </div>
       <div className="flex justify-start items-center md:ml-36 my-3">
         <div className="flex overflow-auto scrollbar-hide ">
           <button
-            onClick={() => setShowMenu(!showMenu)}
             type="button"
             className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
           >
@@ -94,6 +55,51 @@ const FilterButtons = ({ onChangeFilters, filters }) => {
               />
             </svg>
             Filters
+          </button>
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            type="button"
+            className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
+          >
+            {`Rating${filters.rating > 0 ? `: ${filters.rating}.0+` : ""}`}
+          </button>
+          <button
+            type="button"
+            className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
+          >
+            Safe and Hygenic
+          </button>
+          <button
+            type="button"
+            className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
+          >
+            Pure Veg
+          </button>
+          <button
+            type="button"
+            className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 hover:bg-gray-100"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+              />
+            </svg>
+            Delivery Time
+          </button>
+          <button
+            type="button"
+            className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
+          >
+            Great Offers
           </button>
         </div>
       </div>
