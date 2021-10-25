@@ -1,11 +1,11 @@
-import { React } from "react";
 import "./Header.css";
 import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import Find from "./Find";
 import LoginButton from "./LoginButton";
-import SignUpButton from "./SignUpButton";
-
+import { Menu, Transition } from "@headlessui/react";
 import Navbar from "./Navbar";
+import React from "react";
+import SignUpButton from "./SignUpButton";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -13,6 +13,7 @@ function classNames(...classes) {
 
 const Header = (props) => {
   const [location, setLocation] = props.functions;
+  const { setQuery, searchQuery } = props;
   return (
     <div className="header">
       <img
@@ -26,7 +27,8 @@ const Header = (props) => {
         {({ open }) => (
           <>
             <div>
-              <Menu.Button className="hidden md:inline-flex  justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+              {/*This dropdown will be appear on device widths 640px or higher and stay hidden on other widths.*/}
+              <Menu.Button className="hidden sm:inline-flex  justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mt-1 h-5 w-5"
@@ -40,7 +42,7 @@ const Header = (props) => {
                   />
                 </svg>
                 <input
-                  className="w-50  md:w-24 py-2 px-6 text-black-700 leading-tight focus:outline-none"
+                  className="w-50  md:w-28 py-2 px-6 text-black-700 leading-tight focus:outline-none"
                   id="search"
                   type="text"
                   placeholder={location}
@@ -78,6 +80,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Bengaluru")}
                         className={classNames(
                           active
@@ -93,6 +96,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Kolkata")}
                         className={classNames(
                           active
@@ -108,6 +112,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Delhi NCR")}
                         className={classNames(
                           active
@@ -123,6 +128,7 @@ const Header = (props) => {
                   <Menu.Item>
                     {({ active }) => (
                       <button
+                        type="button"
                         onClick={() => setLocation("Mumbai")}
                         className={classNames(
                           active
@@ -143,19 +149,18 @@ const Header = (props) => {
       </Menu>
       {/* Dropdown end */}
 
-      <div className=" ml-5 -mt-3  md:w-80 md:ml-0  max-w-6xl hidden  lg:w-auto md:inline-flex items-center shadow-md rounded-md border border-gray-300 search-bar">
+      <div className="ml-5 -mt-3  md:w-80 md:ml-0  max-w-6xl hidden  lg:w-auto md:inline-flex items-center shadow-md rounded-md border border-gray-300 search-bar">
         <input
           className=" w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
           id="search"
           type="text"
           placeholder="Search for restaurant, cuisine or a dish"
           onInputCapture={(e) => {
-            props.setSearched(false);
-            props.setQuery(e.target.value);
+            setQuery(e.target.value);
           }}
         />
         <div className="p-3">
-          <button onClick={() => props.setSearched(true)}>
+          <button type="button" > {/*</button>onClick={() => props.setSearched(true)}>*/}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-6"
@@ -172,13 +177,26 @@ const Header = (props) => {
             </svg>
           </button>
         </div>
+      {/*This search bar will be appear on device widths 768px or higher and stay hidden on other widths.*/}
+      <div
+        className={
+          searchQuery ? "absolute  rounded-lg top-20 w-80 max-w-lg px-10 lg:w-max  lg:px-24 py-5 z-10 shadow-md overflow-y-auto max-h-96"
+              : "hidden"
+        }>
+          {searchQuery ? <Find searchQuery={searchQuery} /> : ""}
       </div>
-      <div className="navbar lg:hidden  ">
-        <Navbar />
-      </div>
-      <div className="hidden lg:inline-flex ">
+    </div>
+
+      {/*the buttons will appear as text on phones and tablets width 1024px or higher and disappear on widths 768px or higher */}
+      <div className="lg:inline-flex hidden">
         <LoginButton />
         <SignUpButton />
+      </div>
+      {/*the buttons will appear inside a menu in devices width 768px or higher and disappear on
+        any other widths and width greater than 1024px or higher.
+      */}
+      <div className="lg:hidden navbar">
+        <Navbar />
       </div>
     </div>
   );

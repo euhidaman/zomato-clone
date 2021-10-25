@@ -4,9 +4,14 @@
   margin-left: 50px;
   margin-top: -15px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .signup {
-    margin-left: 0;
+    margin-left: 10px;
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .signup {
+    margin-left: 10px;
   }
 }
