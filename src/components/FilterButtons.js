@@ -2,37 +2,37 @@ import React, { useState } from "react";
 import "./FilterButtons.css";
 import CloseIcon from "./icons/CloseIcon";
 
-
-
 const FilterButtons = ({onChangeFilters, filters}) => {
     const [showMenu, setShowMenu] = useState(false);
     return (
         <>
             <div
-            className={`p-8 h-screen bg-gray-100 w-80 absolute z-10 top-0 ${
+            className={`sort-ratings-side-menu p-8 h-screen bg-gray-100 w-80 absolute z-10 top-0 ${
             showMenu ? "left-0" : "-left-full"
             }`}>
                 <button onClick={() => setShowMenu(false)}>
                     <CloseIcon className="absolute z-20 right-10 top-16 bg-transparent" />
                 </button>
                 <h1 className="bg-transparent text-4xl">Rating</h1>
-                {[1, 2, 3, 4, 5].map((elem) => (
-                <button
-                    key={elem}
-                    type="button"
-                    className={`${
-                    filters.rating === elem ? "bg-pink-200" : "bg-white"
-                    } flex  hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out`}
-                    onClick={() =>
-                    onChangeFilters(
-                        filters.rating === elem
-                        ? { ...filters, rating: 0 }
-                        : { ...filters, rating: elem }
-                    )
-                }>
-                    {`Rating: ${elem}.0+`}
-                </button>
-                ))}
+                <div className="rating-buttons-container">
+                    {[1, 2, 3, 4, 5].map((elem) => (
+                    <button
+                        key={elem}
+                        type="button"
+                        className={`${
+                        filters.rating === elem ? "bg-pink-200" : "bg-white"
+                        } flex  hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out rating-button`}
+                        onClick={() =>
+                        onChangeFilters(
+                            filters.rating === elem
+                            ? { ...filters, rating: 0 }
+                            : { ...filters, rating: elem }
+                        )
+                    }>
+                        {`Rating: ${elem}.0+`}
+                    </button>
+                    ))}
+                </div>
             </div>
             <div className="flex justify-start items-center mx-40 my-3 filter-buttons-container">
                 <div className="flex">
