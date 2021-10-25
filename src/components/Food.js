@@ -50,7 +50,8 @@ const Food = ({filters}) => {
                   </div>
                   
                   <div className="w-full">
-                    <div className="flex justify-between hotel-info-wrapper">
+                    <div 
+                    className="flex justify-between hotel-info-wrapper">
                       <h3 className="text-gray-600 text-left text-lg ">{food.hotelName}</h3>
                       <h3 className="text-gray-50 text-left px-2  flex bg-green-500 rounded-md">
                         {food.hotelRating}
@@ -60,7 +61,8 @@ const Food = ({filters}) => {
                       </h3>
                     </div>
                     <div className="w-full">
-                      <div className="flex justify-between py-1 mb-3 hotel-type-price-container">
+                      <div 
+                      className="flex justify-between py-1 mb-3 hotel-type-price-container">
                         <p className="text-gray-400 text-left text-sm">{food.hotelType}</p>
                         <h3 className="text-gray-400 text-right text-sm">{food.price}</h3>
                       </div>

@@ -25,7 +25,6 @@
 }
 
 @media screen and (max-width: 300px) {
-    
     .hotel-info-wrapper, .hotel-type-price-container{
         flex-direction: column;
         justify-content: center;
