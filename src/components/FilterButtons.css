@@ -15,13 +15,12 @@
 
 .rating-buttons-container {
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-top: 1rem;
-        background: transparent;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    background: transparent;
 }
-
 
 @media screen and (max-width: 300px) {
     .filter-buttons-container {

@@ -11,7 +11,7 @@ const FilterButtons = ({onChangeFilters, filters}) => {
             showMenu ? "left-0" : "-left-full"
             }`}>
                 <button onClick={() => setShowMenu(false)}>
-                    <CloseIcon className="absolute z-20 right-10 top-16 bg-transparent" />
+                    <CloseIcon className="absolute z-20 right-10 top-16 bg-transparent close-icon" />
                 </button>
                 <h1 className="bg-transparent text-4xl">Rating</h1>
                 <div className="rating-buttons-container">
