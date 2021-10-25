@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import CloseIcon from "./icons/CloseIcon";
 
-const FilterButtons = () => {
+const FilterButtons = ({ onChangeFilters, filters }) => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <>
+      <div
+        className={`p-8 h-screen bg-gray-100 w-80 absolute z-10 top-0 ${
+          showMenu ? "left-0" : "-left-full"
+        }`}
+      >
+        <button onClick={() => setShowMenu(false)}>
+          <CloseIcon className="absolute z-20 right-10 top-16 bg-transparent" />
+        </button>
+        <h1 className="bg-transparent text-4xl">Rating</h1>
+        {[1, 2, 3, 4, 5].map((elem) => (
+          <button
+            key={elem}
+            type="button"
+            className={`${
+              filters.rating === elem ? "bg-pink-200" : "bg-white"
+            } flex  hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium my-2 border border-gray-300 transition duration-200 each-in-out`}
+            onClick={() =>
+              onChangeFilters(
+                filters.rating === elem
+                  ? { ...filters, rating: 0 }
+                  : { ...filters, rating: elem }
+              )
+            }
+          >
+            {`Rating: ${elem}.0+`}
+          </button>
+        ))}
+      </div>
       <div className="flex justify-start items-center md:ml-36 my-3">
         <div className="flex overflow-auto scrollbar-hide ">
           <button
@@ -26,10 +57,11 @@ const FilterButtons = () => {
             Filters
           </button>
           <button
+            onClick={() => setShowMenu(!showMenu)}
             type="button"
             className="flex bg-white hover:bg-gray-100 text-gray-400 px-6 py-2 rounded font-medium mx-3 border border-gray-300 transition duration-200 each-in-out"
           >
-            Rating: 4.0+
+            {`Rating${filters.rating > 0 ? `: ${filters.rating}.0+` : ""}`}
           </button>
           <button
             type="button"
