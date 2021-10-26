@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios'
 import "./Food.css";
 
-const Food = ({filters}) => {
+const Food = ({ filters }) => {
   const [resDetail, setResDetail] = useState([]);
   const [filteredRes, setFilteredRes] = useState([]);
 
@@ -33,13 +33,20 @@ const Food = ({filters}) => {
 
   return (
     <>
-      <div className="text-gray-400  body-font" >
+      <div className="text-gray-400  body-font">
         <div className="container food-body px-10 py-10 md:mx-auto">
           <div className="flex flex-wrap md:-m-4 md:pl-6 foods-container">
             {filteredRes.map((food, index) => (
-              <div className="w-full mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg food-container">
+              <div
+                key={index}
+                className="w-full mb-4 p-2 lg:w-1/4 md:w-1/2 transform transition duration-200 rounded-lg hover:scale-105 hover:shadow-lg food-container"
+              >
                 <div className="h-full flex flex-col items-center text-center food-wrapper">
-                  <img alt="team" className="flex-shrink-0 rounded-lg w-full h-60 object-cover object-center mb-2 food-image" src={food.hotelUrl}/>
+                  <img
+                    alt="team"
+                    className="flex-shrink-0 rounded-lg w-full h-60 object-cover object-center mb-2 food-image" 
+                    src={food.hotelUrl}
+                  />
                   <div className="w-full ">
                     <div className="flex justify-between bg-transparent -mt-10">
                       <h2 className="text-white bg-blue-500 text-left ">&nbsp; {food.discount} &nbsp;</h2>
