@@ -25,9 +25,7 @@ function App() {
       <FoodOptions />
       <ColoredLine />
       <FilterButtons filters={filters} onChangeFilters={onChangeFilters} />
-      <h1 className="mx-10 md:mx-44 pt-4 text-3xl font-normal">
-        Best Food in {location}
-      </h1>
+      <h1 className="mx-44 pt-4 text-3xl font-normal food-head" >Best Food in {location}</h1>
       <Food filters={filters} />
     </div>
   );

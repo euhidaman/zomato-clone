@@ -23,7 +23,7 @@ const Header = (props) => {
       />
 
       {/* Dropdown start */}
-      <Menu as="div" className="relative mx-8 -mt-2 inline-block text-left ">
+      <Menu as="div" className="relative mx-8 -mt-2 inline-block text-left loc-dropdown">
         {({ open }) => (
           <>
             <div>
@@ -74,7 +74,7 @@ const Header = (props) => {
             >
               <Menu.Items
                 static
-                className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none locations-wrapper"
               >
                 <div className="py-1">
                   <Menu.Item>
@@ -149,59 +149,50 @@ const Header = (props) => {
       </Menu>
       {/* Dropdown end */}
 
+      <div className="ml-5 -mt-3  md:w-80 md:ml-0  max-w-6xl hidden  lg:w-auto md:inline-flex items-center shadow-md rounded-md border border-gray-300 search-bar">
+        <input
+          className=" w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
+          id="search"
+          type="text"
+          placeholder="Search for restaurant, cuisine or a dish"
+          onInputCapture={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+        <div className="p-3">
+          <button type="button" > {/*</button>onClick={() => props.setSearched(true)}>*/}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#828282"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </div>
       {/*This search bar will be appear on device widths 768px or higher and stay hidden on other widths.*/}
-
-      <div className="flex-col ml-5 -mt-3  md:ml-0 lg:w-auto md:inline-flex max-w-6xl hidden items-center focus-within:shadow-md rounded-md border border-gray-300">
-        <div className="flex">
-          <input
-            className="md:w-11/12 lg:w-96 py-4 px-6 text-gray-700 leading-tight focus:outline-none"
-            id="search"
-            type="text"
-            placeholder="Search for restaurant, cuisine or a dish"
-            onInputCapture={(e) => {
-              setQuery(e.target.value);
-            }}
-          />
-          <div className="p-3">
-            <button type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="#828282"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div
-          className={
-            searchQuery
-              ? "absolute  rounded-lg top-20 w-80 max-w-lg px-10 lg:w-max  lg:px-24 py-5 z-10 shadow-md overflow-y-auto max-h-96"
+      <div
+        className={
+          searchQuery ? "absolute  rounded-lg top-20 w-80 max-w-lg px-10 lg:w-max  lg:px-24 py-5 z-10 shadow-md overflow-y-auto max-h-96"
               : "hidden"
-          }
-        >
+        }>
           {searchQuery ? <Find searchQuery={searchQuery} /> : ""}
-        </div>
       </div>
+    </div>
 
-      {/*the buttons will appear as text on phones and tablets width 1024px or higher and disappear on widths 768px or higher */}
-      <div className="md:hidden lg:inline-flex  ">
+      <div className="lg:inline-flex hidden">
         <LoginButton />
         <SignUpButton />
       </div>
-      {/*the buttons will appear inside a menu in devices width 768px or higher and disappear on
-        any other widths and width greater than 1024px or higher.
-      */}
-      <div className="md:inline-flex hidden lg:hidden  ">
+      
+      <div className="lg:hidden navbar">
         <Navbar />
       </div>
     </div>

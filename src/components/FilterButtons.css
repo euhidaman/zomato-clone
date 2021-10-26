@@ -1,0 +1,36 @@
+.filter-buttons-container {
+    justify-content: center;
+}
+.filter-buttons-container .flex button {
+    min-width: max-content;
+    margin: 0.5rem !important;
+}
+
+.filter-buttons-container .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.rating-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    background: transparent;
+}
+
+@media screen and (max-width: 300px) {
+    .filter-buttons-container {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sort-ratings-side-menu {
+        width: 100%;
+        height: max-content;
+    }
+}

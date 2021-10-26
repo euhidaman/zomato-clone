@@ -1,0 +1,38 @@
+.foods-container {
+    justify-content: center;
+    padding: 0;
+    margin: 1rem;
+}
+
+
+.food-container {
+    width: 400px;
+    margin: 0.75rem 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .foods-container {
+        margin: 1rem 0;
+    }
+
+    .food-container {
+        margin: 0.75rem 0;
+    }
+
+    .food-body {
+        padding: 0 1rem !important;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .hotel-info-wrapper, .hotel-type-price-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .hotel-type-price-container {
+        margin-bottom: 0;
+    }
+}

@@ -1,10 +1,20 @@
 .header {
   padding-top: 21px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: max-content;
   align-items: baseline;
   margin: 0 auto;
+}
+
+button.login {
+  margin: 1rem 1rem 1rem 2rem
+}
+
+button > h1.signup {
+  /* padding: 0; */
+  margin: 1rem 0 1rem 1rem;
 }
 
 .header__image {
@@ -13,8 +23,65 @@
   margin-left: 15px;
   margin-top: 5px;
 }
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header .loc-dropdown{
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .header .search-bar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header .navbar {
+    margin-right: 0;
+  }
+}
+
+.locations-wrapper, .locations-wrapper > * {
+  display: relative;
+  z-index: 2;
+}
+
+
+@media screen and (max-width: 1025px) {
+  button  {
+    margin: 0 !important;
+    text-align: center !important;
+    align-self: center;
+  }
+
+  button > h1.signup {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 275px) {
+  .header {
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .header__image, .navbar {
+    text-align: center !important;
+    margin: 0.25rem 0;
+  }
+
+  .loc-dropdown {
+    display: none !important;
   }
 }

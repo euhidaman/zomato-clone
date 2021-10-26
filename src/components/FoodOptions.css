@@ -1,0 +1,38 @@
+@media screen and (max-width: 1250px) {
+    .food-options-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+
+
+    .selected-option-border {
+        position: relative;
+    }
+
+    .selected-option-border::after {
+        position: absolute;
+        top: 100%;
+        content: '';
+        padding-bottom: 0.25rem;
+        width: 120%;
+        border-bottom: 3px solid red;
+    }
+
+    .colored-line hr:first-child {
+        
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .food-options-container {
+        grid-template-columns: 1fr;
+    }
+}

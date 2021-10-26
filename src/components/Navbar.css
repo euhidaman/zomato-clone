@@ -1,0 +1,15 @@
+.login-sign-up-wrapper > *, .login-sign-up-container, .login-sign-up-container > * {
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 275px) {
+    .login-sign-up-container, .login-sign-up-wrapper {
+       margin: 0.25 auto;
+       left: -40%;
+       box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
+
+}
+
+
